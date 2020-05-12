@@ -6,6 +6,7 @@ While making the journey into the wonderful world of the mainframe, I've started
 |**NETSOL.CNTL**        | Series of NETSOL Logon Screens for MVS 3.8J / TK4-.|
 |**NETSOL.CNTL/MVSLOGO**| Logon Screen with MVS in large friendly letters. ![alt text](images/NETSOL-MVSLOGO.PNG "MVSLOGO")|
 |**NETSOL.CNTL/FUZZCOLR**| Logon Screen with site specific details and a warning/disclaimer. ![alt text](images/NETSOL-FUZZCOLR.PNG "MVSLOGO")|
+|**NETSOL.CNTL/ZOSBL**| Logon that was mean to reproduce the one used for z/OS with the Open Mainframe Project COBOL Course. ![alt text](images/NETSOL-ZOSCBL.PNG "MVSLOGO")|
 |**SYS2.EXEC**          | A collection of REXX scripts written for [BREXX/370](https://github.com/mgrossmann/brexx370). As far as I am aware, this is the only version of REXX that is freely available for TK4-.|
 |**images/**            |This just has screenshots used in this file.|
 
