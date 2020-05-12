@@ -9,10 +9,11 @@
 //             PASSWORD=CUL8TR
 //********************************************************************
 //*
-//* Name: HERC01.NETSOL.CNTL(FUZZCOLR)
+//* Name: HERC01.NETSOL.CNTL(ZOSCBL)
 //*
-//* Desc: Build new NETSOL logon screen with lots of pretty colors
-//*
+//* Desc: Build new NETSOL that looks like z/OS used for the 
+//*       COBOL training course.  (quick hack due to boredom)
+//*       I just wanted to see if I could do it.
 //********************************************************************
 //CLEANUP EXEC PGM=IDCAMS
 //SYSPRINT DD  SYSOUT=*
@@ -41,126 +42,83 @@ TK4MLOGW $WCC  (RESETKBD,MDT)
          $SBA  (1,1)
          DC    X'1DF0'     SF (PROTECTED)
          DC    X'284100'   SA (HIGHLIGHTING = DEFAULT)
-         DC    X'2842F6'   SA (COLOR = YELLOW)
-         DC    C'Terminal'
-         $SBA  (1,10)
-         DC    X'1DF0'     SF (PROTECTED)
-         DC    X'284100'   SA (HIGHLIGHTING = DEFAULT)
-         DC    X'2842F5'   SA (COLOR = TURQUOISE)
-TK4MDEV  DC    CL8' '
-         $SBA  (1,67)
-         DC    X'1DF0'     SF (PROTECTED)
-         DC    X'284100'   SA (HIGHLIGHTING = DEFAULT)
-         DC    X'2842F6'   SA (COLOR = YELLOW)
-         DC    C'Date'
-         $SBA  (1,72)
-         DC    X'1DF0'     SF (PROTECTED)
-         DC    X'284100'   SA (HIGHLIGHTING = DEFAULT)
-         DC    X'2842F5'   SA (COLOR = TURQUOISE)
-TK4MDATE DC    CL8' '
-         $SBA  (2,1)
-         DC    X'1DF0'     SF (PROTECTED)
-         DC    X'284100'   SA (HIGHLIGHTING = DEFAULT)
-         DC    X'2842F6'   SA (COLOR = YELLOW)
-         DC    C'System'
-         $SBA  (2,10)
-         DC    X'1DF0'     SF (PROTECTED)
-         DC    X'284100'   SA (HIGHLIGHTING = DEFAULT)
-         DC    X'2842F5'   SA (COLOR = TURQUOISE)
-         DC    C'FUZZ'
-         $SBA  (2,67)
-         DC    X'1DF0'     SF (PROTECTED)
-         DC    X'284100'   SA (HIGHLIGHTING = DEFAULT)
-         DC    X'2842F6'   SA (COLOR = YELLOW)
-         DC    C'Time'
-         $SBA  (2,72)
-         DC    X'1DF0'     SF (PROTECTED)
-         DC    X'284100'   SA (HIGHLIGHTING = DEFAULT)
-         DC    X'2842F5'   SA (COLOR = TURQUOISE)
-TK4MTIME DC    CL8' '
-* INSERT HERE
-         $SBA  (5,33)         
-         DC    X'1DF0'     SF (PROTECTED)
-         DC    X'2841F2'   SA (HIGHLIGHTING = REVERSE)
-         DC    X'2842F4'   SA (COLOR = GREEN)
-         DC    C'FUZZ Mainframe'
-         $SF   (SKIP)
-         $SBA  (8,1)
+         DC    X'2842F7'   SA (COLOR = WHITE)
+         DC    C'Build an IBM Z Cognitive Enterprise'
+         $SBA  (4,24)
          DC    X'1DF0'     SF (PROTECTED)
          DC    X'284100'   SA (HIGHLIGHTING = DEFAULT)
          DC    X'2842F2'   SA (COLOR = RED)
-         DC    C'WARNING'
-         $SBA  (8,10)
+         DC    C'http://ibm.biz/zosintro'
+         $SBA  (5,24)         
+         DC    X'1DF0'     SF (PROTECTED)
+         DC    X'284100'   SA (HIGHLIGHTING = DEFAULT)
+         DC    X'2842F2'   SA (COLOR = RED)
+         DC    C'http://ibm.biz/enterprise-cobol'
+         $SBA  (7,33)
+         DC    X'1DF0'     SF (PROTECTED)
+         DC    X'284100'   SA (HIGHLIGHTING = DEFAULT)
+         DC    X'2842F4'   SA (COLOR = GREEN)
+         DC    C'//  OOOOOOO  SSSSSSS'
+         $SBA  (8,32)
+         DC    X'1DF0'     SF (PROTECTED)
+         DC    X'284100'   SA (HIGHLIGHTING = DEFAULT)
+         DC    X'2842F4'   SA (COLOR = GREEN)
+         DC    C'//  OO    OO SS'
+         $SBA  (9,24)
+         DC    X'1DF0'     SF (PROTECTED)
+         DC    X'284100'   SA (HIGHLIGHTING = DEFAULT)
+         DC    X'2842F4'   SA (COLOR = GREEN)
+         DC    C'zzzzzz //  OO    OO SS'
+         $SBA  (10,26)
+         DC    X'1DF0'     SF (PROTECTED)
+         DC    X'284100'   SA (HIGHLIGHTING = DEFAULT)
+         DC    X'2842F4'   SA (COLOR = GREEN)
+         DC    C'zz  //  OO    OO   SSSS'   
+         $SBA  (11,24)
+         DC    X'1DF0'     SF (PROTECTED)
+         DC    X'284100'   SA (HIGHLIGHTING = DEFAULT)
+         DC    X'2842F4'   SA (COLOR = GREEN)
+         DC    C'zz   //  OO    OO       SS' 
+         $SBA  (12,22)
+         DC    X'1DF0'     SF (PROTECTED)
+         DC    X'284100'   SA (HIGHLIGHTING = DEFAULT)
+         DC    X'2842F4'   SA (COLOR = GREEN)
+         DC    C'zz    //  OO    OO       SS' 
+         $SBA  (13,20)
+         DC    X'1DF0'     SF (PROTECTED)
+         DC    X'284100'   SA (HIGHLIGHTING = DEFAULT)
+         DC    X'2842F4'   SA (COLOR = GREEN)
+         DC    C'zzzzzz //   OOOOOOO  SSSSSSS' 
+         $SBA  (15,21)
+         DC    X'1DF0'     SF (PROTECTED)
+         DC    X'284100'   SA (HIGHLIGHTING = DEFAULT)
+         DC    X'2842F4'   SA (COLOR = GREEN)
+         DC    C'IBM Z, The Next Generation'
+         $SBA  (17,17)
+         DC    X'1DF0'     SF (PROTECTED)
+         DC    X'284100'   SA (HIGHLIGHTING = DEFAULT)
+         DC    X'2842F2'   SA (COLOR = RED)
+         DC    C'z/OS Runs the Economy of the World'
+         $SBA  (20,2)
          DC    X'1DF0'     SF (PROTECTED)
          DC    X'284100'   SA (HIGHLIGHTING = DEFAULT)
          DC    X'2842F7'   SA (COLOR = WHITE)
-         DC    C'The use of this system is restricted to authorized'
-         DC    C' users. All'
-         $SBA  (9,11)
-         DC    C'information and communications on this system are '
-         DC    C'subject to review,'
-         $SBA  (10,11)
-         DC    C'monitoring and recording at any time, without notice '
-         DC    C'or permission.'
-         $SBA  (11,11)
-         DC    C'Users should have no expectations of privacy. '
-         DC    C'Unauthorized access or'
-         $SBA  (12,11)
-         DC    C'use shall be subject to prosecution.'
-         $SBA (16,11)
-         DC    X'1DF0'     SF (PROTECTED)
-         DC    X'284100'   SA (HIGHLIGHTING = DEFAULT)
-         DC    X'2842F6'   SA (COLOR = YELLOW)
-         DC    C'IT Help Desk x5000' 
-         $SBA  (16,49)
+         DC    C'===> Enter "logon" followed by the TSO userid.'
+         DC    C' Example "logon userid" or'
+         $SBA  (21,2)
          DC    X'1DF0'     SF (PROTECTED)
          DC    X'284100'   SA (HIGHLIGHTING = DEFAULT)
          DC    X'2842F7'   SA (COLOR = WHITE)
-         DC    C'Powered by'
-         $SBA  (17,49)
-         DC    X'1DF0'     SF (PROTECTED)
-         DC    X'284100'   SA (HIGHLIGHTING = DEFAULT)
-         DC    X'2842F1'   SA (COLOR = BLUE)
-         DC    C'IBM OS/VS2 MVS 3.8J (8505)'
-         $SBA  (18,49)
-         DC    X'1DF0'     SF (PROTECTED)
-         DC    X'284100'   SA (HIGHLIGHTING = DEFAULT)
-         DC    X'2842F1'   SA (COLOR = BLUE)         
-         DC    C'TK4- v1.00 Update 8'
-         $SBA  (19,49)
-         DC    X'1DF0'     SF (PROTECTED)
-         DC    X'284100'   SA (HIGHLIGHTING = DEFAULT)
-         DC    X'2842F1'   SA (COLOR = BLUE)        
-         DC    C'KICKS V1R5M0'
+         DC    C'===> Enter TSO'
          $SF   (SKIP)
-         $SBA  (20,49)
-         DC    X'1DF0'     SF (PROTECTED)
-         DC    X'284100'   SA (HIGHLIGHTING = DEFAULT)
-         DC    X'2842F1'   SA (COLOR = BLUE)        
-         DC    C'BREXX/370 V2R2M1'         
-         $SF   (SKIP)
-         $SBA  (21,49)
-         DC    X'1DF0'     SF (PROTECTED)
-         DC    X'284100'   SA (HIGHLIGHTING = DEFAULT)
-         DC    X'2842F1'   SA (COLOR = BLUE)        
-         DC    C'NJE38'         
-         $SF   (SKIP)
-* INSERT END
-         $SBA  (22,79)
+         $SBA  (21,79)
          DC    X'1DF0'     SF (PROTECTED)
          DC    X'284100'   SA (HIGHLIGHTING = DEFAULT)
          DC    X'2842F7'   SA (COLOR = WHITE)
-         $SBA  (23,1)
-         DC    C'Logon ===>'
-         $SBA  (23,11)
+         $SBA  (22,1)
          $SF   (UNPROT,HI)
          $IC
 TK4MINP  DC    CL128' '
-         $SBA  (24,64)
-         DC    X'1DF0'     SF (PROTECTED)
-         DC    X'284100'   SA (HIGHLIGHTING = DEFAULT)
-         DC    X'2842F1'   SA (COLOR = BLUE)
-         DC    C'IBM 3084 Inside'
          $SBA  (24,80)
          $SF   (SKIP,HI)
 TK4MLOGL EQU   *-TK4MLOG
@@ -169,20 +127,6 @@ TK4MLOGL EQU   *-TK4MLOG
          CLI   MSGINDEX,X'0C'             , is this msg to be shown?    23164805
          BNE   NOUSS                      , bif not                     23164810
 *                                         , update logo screen          23164815
-         LA    R15,DATETIME               , call DATETIME ..            23164816
-         LA    R3,TK4MDATE                , .. to fill date and ..      23164817
-         LA    R4,TK4MTIME                , .. time fields ..           23164818
-         BALR  R14,R15                    , .. on the logo screen       23164819
-         MVC   SYNARG(FOUR),CID           , get CID into SYNCHRPL       23164820
-         OI    MFLAGS2,INQUIRE            , indicate INQUIRE            23164825
-         OI    MACFLAGS,INQCIDX           , indicate INQ CIDXLATE       23164830
-         NI    SRPLEXT1,FF-RPLNIB         , synch RPL has CID in        23164835
-*                                         ,  ARG field                  23164840
-       INQUIRE RPL=SYNCHRPL,              , get terminal name          *23164845
-               OPTCD=CIDXLATE,            ,  from CID and put          *23164846
-               AREA=TK4MDEV,              ,  it on the logo screen     *23164847
-               AREALEN=D8                                               23164848
-         NI    MFLAGS2,FF-INQUIRE         , INQUIRE is done             23164850
 *                                         , Now write the screen        23164852
          LA    R3,TK4MLOGL                , load length of screen data  23164855
          L     R4,=A(TK4MLOG)             , load address of screen data 23164860
