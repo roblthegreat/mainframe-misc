@@ -6,12 +6,14 @@ While making the journey into the wonderful world of the mainframe, I've started
 |**NETSOL.CNTL**        | Series of NETSOL Logon Screens for MVS 3.8J / TK4-.|
 |**NETSOL.CNTL/MVSLOGO**| Logon Screen with MVS in large friendly letters. ![alt text](images/NETSOL-MVSLOGO.PNG "MVSLOGO")|
 |**NETSOL.CNTL/FUZZCOLR**| Logon Screen with site specific details and a warning/disclaimer. ![alt text](images/NETSOL-FUZZCOLR.PNG "MVSLOGO")|
-|**NETSOL.CNTL/ZOSCBL**| Logon that was mean to reproduce the one used for z/OS with the Open Mainframe Project COBOL Course. ![alt text](images/NETSOL-ZOSCBL.PNG "MVSLOGO")|
+|**NETSOL.CNTL/ZOSCBL**| Logon that was meant to reproduce the look of the one used for z/OS with the Open Mainframe Project COBOL Course. ![alt text](images/NETSOL-ZOSCBL.PNG "MVSLOGO")|
 |**SYS2.EXEC**          | A collection of REXX scripts written for [BREXX/370](https://github.com/mgrossmann/brexx370). As far as I am aware, this is the only version of REXX that is freely available for TK4-.|
 |**images/**            |This just has screenshots used in this file.|
 
 
 ## Note about NETSOL logon screens
+Note that the logon screens are heavily modified versions of logon screen included with TK4-.   Primarily, I have replaced the streams sent to terminal.  I've also change the date format to US standard Month/Day/Year, which is just a personal preference.
+
 After 'SUBMIT' of the logon screen, you will either need to shutdown and IPL, or restart several services to make the new screen active.
 ### Steps to stop and restart services after replacing logon screen
 From Hercules console (if you are not running in automated mode) or the Hercules Web console, enter the following 3 commands to stop the related services:
